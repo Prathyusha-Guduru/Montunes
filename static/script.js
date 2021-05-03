@@ -1,8 +1,12 @@
+// Getting temperature 
 let temp = document.querySelector('.temp').innerHTML
 temp = Number(temp)
+
+// Selecting the H3 tag with weather-commentary class
 let weatherCommentary = document.querySelector('.weather-commentary')
 
 
+// Comments for each temperature range
 const temperature_description = [`Dude, you must be living on the sun`,
 `It hot, stay cool!`,
 `Don't forget to put on sunscreen and stay hydrated!`,
@@ -12,7 +16,7 @@ const temperature_description = [`Dude, you must be living on the sun`,
 `Wear warm clothing and enjoy the snow`,
 `It's unbearably cold, stay inside!`]
 
-
+//Returns comments for each temperature range
 function getWeatheComment(temp){
 	if(temp >= 40){
 		console.log(temperature_description[0])
@@ -48,4 +52,5 @@ function getWeatheComment(temp){
 	}
 }
 
+//Writes the weather comments into the HTML page according to the temperature at user's location
 weatherCommentary.innerHTML = getWeatheComment(temp)
