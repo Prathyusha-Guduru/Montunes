@@ -1,5 +1,6 @@
 let temp = document.querySelector('.temp').innerHTML
 temp = Number(temp)
+let weatherCommentary = document.querySelector('.weather-commentary')
 
 
 const temperature_description = [`Dude, you must be living on the sun`,
@@ -33,11 +34,11 @@ function getWeatheComment(temp){
 		console.log(temperature_description[4])
 		return temperature_description[4]
 	}
-	else if(temp < 15 && temp >= 0){
+	else if(temp < 15 && temp >= 5){
 		console.log(temperature_description[5])
 		return temperature_description[5]
 	}
-	else if(temp <0 && temp >= -10){
+	else if(temp <5 && temp >= -10){
 		console.log(temperature_description[6])
 		return temperature_description[6]
 	}
@@ -46,3 +47,5 @@ function getWeatheComment(temp){
 		return temperature_description[7]
 	}
 }
+
+weatherCommentary.innerHTML = getWeatheComment(temp)
