@@ -20,6 +20,7 @@ def getWeatherResults(lat,long,api_key):
 	result = requests.get(api_url).json()
 	description = result["weather"][0]["description"]
 	temp = result["main"]["temp"]
+
 	return (description,temp)
 
 #Latitude,longitude
