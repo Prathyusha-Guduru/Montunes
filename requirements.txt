@@ -27,6 +27,7 @@ pylint==2.6.0
 python-dateutil==2.8.1
 python-editor==1.0.4
 pyzmq==19.0.2
+requests
 six==1.15.0
 SQLAlchemy 
 toml==0.10.1
