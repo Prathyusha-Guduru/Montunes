@@ -1,9 +1,10 @@
 
+
+// Mapping HTML Buttons
 const musicContainer = document.getElementById('music-container');
 const playBtn = document.getElementById('play');
 const prevBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('next');
-
 const audio = document.getElementById('audio');
 const progress = document.getElementById('progress');
 const progressContainer = document.getElementById('progress-container');
@@ -11,11 +12,12 @@ const title = document.getElementById('title');
 const cover = document.getElementById('cover');
 
 
-console.log(title);
+// Songs list
 const songs = ['i-will-be','aurora','maroon-5']
 let songIndex = 1
 
-loadSong(songs[songIndex])
+
+//Functions for loading,playing,pausing, nextSong, prevSong, and progress Bar
 
 function loadSong(song){
 	title.innerText = song
@@ -39,16 +41,6 @@ function pauseSong(){
 	audio.pause()
 }
 
-playBtn.addEventListener('click',()=>{
-	const isPlaying = musicContainer.classList.contains('play')
-	if(isPlaying){
-		pauseSong()
-	}
-	else{
-		playSong()
-	}
-})
-
 function prevSong(){
 	if(songIndex === 0){
 		songIndex = 0
@@ -61,8 +53,6 @@ function prevSong(){
 		playSong()
 	}
 }
-prevBtn.addEventListener('click',prevSong)
-
 
 function nextSong(){
 	if(songIndex === 2){
@@ -76,7 +66,6 @@ function nextSong(){
 		playSong()
 	}
 }
-nextBtn.addEventListener('click',nextSong)
 
 function updateProgress(e) {
 	const { duration, currentTime } = e.srcElement;
@@ -92,8 +81,21 @@ function setProgress(e){
 	console.log(clickX);
 }
 
+
+
+//Function calls and event listeners
+loadSong(songs[songIndex])
+playBtn.addEventListener('click',()=>{
+	const isPlaying = musicContainer.classList.contains('play')
+	if(isPlaying){
+		pauseSong()
+	}
+	else{
+		playSong()
+	}
+})
+prevBtn.addEventListener('click',prevSong)
+nextBtn.addEventListener('click',nextSong)
 audio.addEventListener('timeupdate',updateProgress)
-
 progressContainer.addEventListener('click',setProgress)
-
 audio.addEventListener('ended',nextSong)

@@ -90,8 +90,8 @@ body {
   width: 100%;
 }
 
-.progress-container .progress {
-  background-color: #fe8daa;
+.progress {
+  background-color: #4c4c4c;
   border-radius: 5px;
   height: 100%;
   width: 0%;
