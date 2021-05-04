@@ -3,15 +3,17 @@
 
 <div class="content">
 	<div class="music-container" id="music-container">
-		<div class="music-info">
-			<h4 id="title">Ukelee</h4>
-			<div class="progress-container" id='progress-container'>
-				<div id="progress" class="progress"></div>
-			</div>
-		</div>
+
 		<audio id="audio" src=""></audio>
-		<div class="img-container">
-			<img id="cover" src="/static/assets/images/Screenshot 2021-05-04 165930.jpg" alt="music cover image">
+		<div class="music-img-container">
+			<img id="music-cover" src="" alt="music cover image">
+		</div>
+		<div class="music-info">
+			<h4 id="title"></h4>
+
+		</div>
+		<div class="progress-container" id='progress-container'>
+			<div id="progress" class="progress"></div>
 		</div>
 		<div class="navigation">
 			<button id="prev" class="action-btn"> <i class="fas fa-backward"></i> </button>
@@ -23,3 +25,7 @@
 </div>
 <script src="/static/script.js"></script>
 {%endblock %}
+
+{%block navbar%}
+<a class='nav-link' href="{{url_for('index')}}">Weather</a>
+{% endblock %}

@@ -40,49 +40,8 @@ body {
   font-size: 10em;
 }
 
-.content .img-cover img {
-  width: 300px;
-}
-
-.content .title {
-  padding: 15px 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 1.8em;
-}
-
-.content .navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.content .navigation #play {
-  font-size: 1.2em;
-}
-
-.content .action-btn {
-  background: transparent;
-  border: none;
-  font-size: 1em;
-  padding: 10px 30px;
-}
-
-.progress-container {
-  background: #fff;
+.music-container .progress-container {
+  background: #d3d3d3;
   border-radius: 5px;
   cursor: pointer;
   margin: 10px 0;
@@ -90,13 +49,54 @@ body {
   width: 100%;
 }
 
-.progress {
+.music-container .progress-container .progress {
   background-color: #4c4c4c;
   border-radius: 5px;
   height: 100%;
   width: 0%;
   -webkit-transition: width 0.1s linear;
   transition: width 0.1s linear;
+}
+
+.music-container #title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 30px;
+  padding: 20px 10px;
+}
+
+.music-container .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.music-container .navigation #play {
+  font-size: 1.2em;
+}
+
+.music-container .action-btn {
+  background: transparent;
+  border: none;
+  font-size: 1em;
+  padding: 10px 30px;
+}
+
+.music-container #music-cover {
+  width: 400px;
 }
 
 .image {

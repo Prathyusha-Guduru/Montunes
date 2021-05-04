@@ -9,7 +9,7 @@ const audio = document.getElementById('audio');
 const progress = document.getElementById('progress');
 const progressContainer = document.getElementById('progress-container');
 const title = document.getElementById('title');
-const cover = document.getElementById('cover');
+const cover = document.getElementById('music-cover');
 
 
 // Songs list
@@ -22,7 +22,7 @@ let songIndex = 1
 function loadSong(song){
 	title.innerText = song
 	audio.src = `static/audio/${song}.mp3`
-	cover.src = `icons8-weather-48.png`
+	cover.src = `/static/assets/images/Screenshot 2021-05-04 165930.jpg`
 	console.log(song);
 }
 

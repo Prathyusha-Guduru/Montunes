@@ -8,6 +8,7 @@ $gray : #4c4c4c;
 $Myfont : 'Montserrat', sans-serif;
 $thicker-font : 800;
 $lighter-font : 500;
+$light-gray : #d3d3d3;
 
 
 @mixin flexCenter{
@@ -34,6 +35,9 @@ body{
 	@include noScroll()
 }
 
+
+
+
 .content{
 	@include flexCenter();
 	flex-direction: column;
@@ -45,17 +49,38 @@ body{
 		font-size: 10em;
 	}
 
-	.img-cover{
-		img{
-			width: 300px;
+
+
+
+
+
+}
+
+.music-container{
+
+	.progress-container {
+		background: $light-gray;
+		border-radius: 5px;
+		cursor: pointer;
+		margin: 10px 0;
+		height: 4px;
+		width: 100%;
+		.progress {
+			background-color: $gray;
+			border-radius: 5px;
+			height: 100%;
+			width: 0%;
+			transition: width 0.1s linear;
 		}
-	}
-	.title{
-		padding: 15px 10px;
-		@include flexCenter();
-		font-size : 1.8em;
+		
 	}
 
+	#title{
+		@include flexCenter();
+		font-size: 30px;
+		padding: 20px 10px;	
+	}
+	
 	.navigation {
 		@include flexCenter();
 		#play{
@@ -68,24 +93,11 @@ body{
 		font-size: 1em;
 		padding: 10px 30px;
 	}
+	#music-cover{
+		width: 400px;
+	}
+	
 
-}
-
-.progress-container {
-	background: #fff;
-	border-radius: 5px;
-	cursor: pointer;
-	margin: 10px 0;
-	height: 4px;
-	width: 100%;
-}
-
-.progress {
-	background-color: $gray;
-	border-radius: 5px;
-	height: 100%;
-	width: 0%;
-	transition: width 0.1s linear;
 }
 
 
