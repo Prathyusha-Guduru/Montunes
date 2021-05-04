@@ -39,6 +39,10 @@ def index():
 	city,region = getLocation()
 	return render_template('index.html',description = description,temp = temp,city = city,region = region)
 
+@app.route('/music')
+def music():
+	return render_template('music.html')
+
 #Running the app
 if __name__ == '__main__':
 	app.run()
