@@ -35,5 +35,5 @@ wcwidth==0.2.5
 Werkzeug 
 wincertstore==0.2
 wrapt==1.12.1
-WTForms 
+
 gunicorn
