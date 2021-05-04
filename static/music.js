@@ -19,7 +19,7 @@ loadSong(songs[songIndex])
 
 function loadSong(song){
 	title.innerText = song
-	audio.src = `${song}.mp3`
+	audio.src = `static/audio/${song}.mp3`
 	cover.src = `icons8-weather-48.png`
 	console.log(song);
 }
