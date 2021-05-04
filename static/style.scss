@@ -58,7 +58,10 @@ body{
 		@include flexCenter();
 		font-size : 1.8em;
 	}
-
+	.action-btn{
+		background: transparent;
+		border: none;
+	}
 }
 
 .image{
