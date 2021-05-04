@@ -13,6 +13,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  overflow: hidden;
 }
 
 .content {
@@ -39,11 +40,6 @@ body {
   font-size: 10em;
 }
 
-.content .music-container {
-  position: relative;
-  bottom: 100px;
-}
-
 .content .img-cover img {
   width: 300px;
 }
@@ -62,9 +58,27 @@ body {
   font-size: 1.8em;
 }
 
+.content .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content .navigation #play {
+  font-size: 1.2em;
+}
+
 .content .action-btn {
   background: transparent;
   border: none;
+  font-size: 1em;
+  padding: 10px 30px;
 }
 
 .image {
