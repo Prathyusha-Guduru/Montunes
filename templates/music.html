@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="content">
+	<div class="music-container">
+		<div class="music-info">
+			<div class="img-cover">
+				<img src="/static/assets/images/Screenshot 2021-05-04 165930.jpg" alt="">
+			</div>
+			<h2 class="title">Song Name</h2>
+			<div class="progress-container">
+				<div class="progress">
+
+				</div>
+			</div>
+		</div>
+		<audio src="" class="audio"></audio>
+		<div class="navigation">
+			<button id="prev" class="action-btn"> <i class="fas fa-backward"></i> </button>
+			<button id="play" class="action-btn"> <i class="fas fa-play"></i> </button>
+			<button id="next" class="action-btn"> <i class="fas fa-forward"></i> </button>
+		</div>
+	</div>
+</div>
+<script src="/static/music.js"></script>
+{% endblock %}
+
+{% block navbar %}
+<a href="{{url_for('index')}}">Weather</a>
+{% endblock %}

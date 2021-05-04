@@ -17,7 +17,7 @@ $lighter-font : 500;
 }
 
 @mixin noScroll{
-	overflow : hidden;
+	// overflow : hidden;
 }
 
 *{
@@ -43,6 +43,20 @@ body{
 	width: 40%;
 	.temperature{
 		font-size: 10em;
+	}
+	.music-container{
+		position: relative;
+		bottom: 100px;
+	}
+	.img-cover{
+		img{
+			width: 300px;
+		}
+	}
+	.title{
+		padding: 15px 10px;
+		@include flexCenter();
+		font-size : 1.8em;
 	}
 
 }
