@@ -2,19 +2,17 @@
 
 {% block content %}
 <div class="content">
-	<div class="music-container">
+	<div class="music-container" id="music-container">
 		<div class="music-info">
-			<div class="img-cover">
-				<img src="/static/assets/images/Screenshot 2021-05-04 165930.jpg" alt="">
-			</div>
-			<h2 class="title">Song Name</h2>
-			<div class="progress-container">
-				<div class="progress">
-
-				</div>
+			<h4 id="title">Ukelee</h4>
+			<div class="progress-container" id='progress-container'>
+				<div id="progress" class="progress"></div>
 			</div>
 		</div>
-		<audio src="" class="audio"></audio>
+		<audio id="audio" src="/static/audio/aurora.mp3"></audio>
+		<div class="img-container">
+			<img id="cover" src="icons8-weather-48.png" alt="">
+		</div>
 		<div class="navigation">
 			<button id="prev" class="action-btn"> <i class="fas fa-backward"></i> </button>
 			<button id="play" class="action-btn"> <i class="fas fa-play"></i> </button>
