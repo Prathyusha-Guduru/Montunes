@@ -1,0 +1,77 @@
+// Google fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+
+// Defining colors and font
+$lighter-black : #2c2c2c;
+$gray : #4c4c4c;
+$Myfont : 'Montserrat', sans-serif;
+$thicker-font : 800;
+$lighter-font : 500;
+
+
+@mixin flexCenter{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin noScroll{
+	overflow : hidden;
+}
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	position: relative;
+	@include noScroll()
+}
+
+.content{
+	@include flexCenter();
+	flex-direction: column;
+	color: $lighter-font;
+	font-family: $Myfont;
+	height: 100%;
+	width: 40%;
+	.temperature{
+		font-size: 10em;
+	}
+
+}
+
+.image{
+	width: 40%;
+	img{
+		width: 50rem;
+	}
+}
+
+.navbar{
+	@include flexCenter();
+	height: 100%;
+	background-color: #FFF;
+	font-family: $Myfont;
+	width: 5%;
+	position: absolute;
+	right: 0px;
+	a{
+		font-size: 2em;
+		transform: rotate(-270deg);
+		text-decoration: none;
+		color: $lighter-black;
+
+		&:hover{
+			color: $gray;
+		}
+	}
+
+}
+

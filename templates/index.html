@@ -1,22 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
+{% block content %}
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="/static/assets/icons/icons8-weather-48.png" type="image/x-icon">
-	<title>Montunes</title>
-</head>
+<div class="info content">
+	<h1 class="temperature"> <strong class="temp">{{ temp }}</strong> ° C </h1>
+	<h2 class="location">{{ city }}, {{ region }}</h2>
+	<h3 class="description">{{ description }}</h3>
+	<h3 class="weather-commentary description"></h3>
+</div>
 
-<body>
-	<div class="info">
-		<h1>Weather : <strong class="temp">{{ temp }}</strong> ° C {{ rain }}</h1>
-		<h2>{{ city }}, {{ region }}</h2>
-		<h3>{{ description }}</h3>
-		<h3 class="weather-commentary"></h3>
-	</div>
-	<script src="/static/script.js"></script>
-</body>
-
-</html>
+<script src="/static/script.js"></script>
+{%endblock %}

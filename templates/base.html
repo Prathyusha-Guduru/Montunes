@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+
+
+<body>
+	{% block content %}
+	<div class="content">
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ipsam ullam ex eveniet libero esse sint
+			mollitia at, harum aliquam dicta, natus nihil magnam quidem ipsa nulla, itaque eius quasi.</p>
+	</div>
+	{% endblock %}
+	{% block image %}
+	<div class="image">
+		<img src="/static/assets/images/green-bg.jpg" alt="">
+	</div>
+	{% endblock %}
+	{% block navbar %}
+	<div class="navbar">
+		<a class='nav-link' href="#">Music</a>
+	</div>
+	{% endblock %}
+</body>
+
+</html>

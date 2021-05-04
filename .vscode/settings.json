@@ -1,3 +1,4 @@
 {
-	"python.pythonPath": "C:\\Users\\prath\\anaconda3\\envs\\WebEnv\\python.exe"
+	"python.pythonPath": "C:\\Users\\prath\\anaconda3\\envs\\WebEnv\\python.exe",
+	"liveServer.settings.port": 5501
 }
