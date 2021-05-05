@@ -1,4 +1,4 @@
-console.log(temp)
+
 
 // Mapping HTML Buttons
 const musicContainer = document.getElementById('music-container')
@@ -14,7 +14,7 @@ const cover = document.getElementById('music-cover')
 
 // Songs list
 const songs = ['i-will-be','aurora','maroon-5']
-let songIndex = 1
+let songIndex = 0
 
 //Songs list according to temperatures-range
 const songsForHotWeather = ['shape-of-you','girls-like-you']
@@ -26,7 +26,7 @@ const songsForColdWeather = ['perfect','aurora']
 function loadSong(song){
 	title.innerText = song
 	audio.src = `static/audio/${song}.mp3`
-	cover.src = `/static/assets/images/Screenshot 2021-05-04 165930.jpg`
+	cover.src = `static/assets/images/${song}.png`
 	console.log(song);
 }
 
@@ -88,7 +88,7 @@ function setProgress(e){
 
 
 //Function calls and event listeners
-loadSong(songs[songIndex])
+loadSong(songsForHotWeather[songIndex])
 playBtn.addEventListener('click',()=>{
 	const isPlaying = musicContainer.classList.contains('play')
 	if(isPlaying){
