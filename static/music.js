@@ -1,20 +1,24 @@
-
+console.log(temp)
 
 // Mapping HTML Buttons
-const musicContainer = document.getElementById('music-container');
-const playBtn = document.getElementById('play');
-const prevBtn = document.getElementById('prev');
-const nextBtn = document.getElementById('next');
-const audio = document.getElementById('audio');
-const progress = document.getElementById('progress');
-const progressContainer = document.getElementById('progress-container');
-const title = document.getElementById('title');
-const cover = document.getElementById('music-cover');
+const musicContainer = document.getElementById('music-container')
+const playBtn = document.getElementById('play')
+const prevBtn = document.getElementById('prev')
+const nextBtn = document.getElementById('next')
+const audio = document.getElementById('audio')
+const progress = document.getElementById('progress')
+const progressContainer = document.getElementById('progress-container')
+const title = document.getElementById('title')
+const cover = document.getElementById('music-cover')
 
 
 // Songs list
 const songs = ['i-will-be','aurora','maroon-5']
 let songIndex = 1
+
+//Songs list according to temperatures-range
+const songsForHotWeather = ['shape-of-you','girls-like-you']
+const songsForColdWeather = ['perfect','aurora']
 
 
 //Functions for loading,playing,pausing, nextSong, prevSong, and progress Bar
