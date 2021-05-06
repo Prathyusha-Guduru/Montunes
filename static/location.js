@@ -7,7 +7,7 @@ function onSucess(lat,long){
 	let status = 1
 	//POST REQUEST TO SERVER
 	$.post("/", {
-		userStatus : 1,
+		userStatus : status,
 		lat : lat,
 		long : long
 	});

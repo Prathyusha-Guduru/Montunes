@@ -43,6 +43,11 @@ def index():
 def music():
 	return render_template('music.html')
 
+@app.route('/weather',methods = ['GET','POST'])
+def weather():
+	status = request.form.get("userStatus", False)
+	print(f"Status is {status}")
+	return render_template('weather.html',status = status)
 #Running the app
 if __name__ == '__main__':
-	app.run()
+	app.run(debug = True)
