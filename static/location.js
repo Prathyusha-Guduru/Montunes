@@ -5,8 +5,9 @@ function onSucess(lat,long){
 	
 	console.log(`Latitude is ${lat} and longitude is ${long}`);
 	let status = 1
+	//POST REQUEST TO SERVER
 	$.post("/", {
-		userStatus : status,
+		userStatus : 1,
 		lat : lat,
 		long : long
 	});
@@ -19,8 +20,9 @@ function onFailure(message){
 	console.log(message);
 	let failed = 0
 	console.log(`if onfailure is getting executed ${failed} and `);
+	//POST REQUEST TO SERVER
 	$.post("/", {
-		userStatus : failed,
+		userStatus : 0,
 		lat : 0,
 		long : 0
 	});
