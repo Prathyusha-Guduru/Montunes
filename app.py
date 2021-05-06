@@ -8,7 +8,7 @@ import configparser
 from ip import getLocation,getLatLong
 
 
-#API Configuration
+#API Configuration	
 def getApiKey():
 	config = configparser.ConfigParser()
 	config.read('config.ini')
