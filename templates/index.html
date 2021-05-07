@@ -6,10 +6,13 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+	<link rel="stylesheet" href="/static/stylesheets/style.css">
 </head>
 
 <body>
-	<a href="{{url_for('index')}}">Check weather</a>
+	<div class="home-screen-container">
+		<a class="big-home-button" href="{{url_for('index')}}">Check weather</a>
+	</div>
 
 	<script src="/static/location.js"></script>
 </body>
