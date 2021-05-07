@@ -16,7 +16,7 @@ def getWeatherResults(lat,long,api_key):
 	place = result["name"]
 	description = result["weather"][0]["description"]
 	temp = result["main"]["temp"]
-	print(f"place is {place}")
+	# print(f"place is {place}")
 	return (description,temp,place)
 
 # Function for processng data recived from POST request by fetch() in location.js file
@@ -41,11 +41,9 @@ app.config['SECRET_KEY']  = 'itsasecret'
 def get_post_javascript_data():
 
 	req = request.get_json()
-	print(req)
+	# print(req)
 	global data
-	print(f"data is {data}")
 	data = random(req)
-	print(f"data is {data} and its type is {type(data)}")
 	return render_template('index.html')
 
 # 2nd page view (if access is given)
@@ -54,9 +52,9 @@ def index():
 	#Api calls
 	description,temperature,place = getWeatherResults(data['lat'],data['long'],getApiKey())
 	global temp
-	print(f"temp is {temp}")
+	# print(f"temp is {temp}")
 	temp = temperature
-	print(f"temp is {temp}")
+	# print(f"temp is {temp}")
 	return render_template('weather.html',description = description,temperature = temperature,place = place)
 
 # Music view
