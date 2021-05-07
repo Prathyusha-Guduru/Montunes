@@ -62,8 +62,8 @@ function prevSong(){
 }
 
 function nextSong(){
-	if(songIndex === 2){
-		songIndex = 2
+	if(songIndex === 5){
+		songIndex = 5
 		loadSong(songs[songIndex])
 		playSong()
 	} 
