@@ -1,6 +1,5 @@
 #importing 3rd party libraries
-from flask import Flask,render_template,redirect,request,url_for,jsonify
-from flask.helpers import make_response
+from flask import Flask,render_template,redirect,request,url_for,jsonify,make_response
 import requests
 
 import configparser
@@ -45,10 +44,11 @@ def index():
 def music():
 	return render_template('music.html')
 
-@app.route('/weather', methods = ['POST'])
+@app.route('/weather', methods = ['POST','GET'])
 def get_post_javascript_data():
-	jsdata = request.form['javascript_data']
-	print(jsdata)
+	req = request.get_json()
+	print(req)
+	res = make_response(jsonify({"message":"JSON recieved"}),200)
 	return render_template('weather.html')
 
 #Running the app
