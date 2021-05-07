@@ -27,19 +27,15 @@ def random(req):
 		return None
 
 
-# Global variable
+# Global variables
 data = {}
+temp = 0
 
 #Flask app creation and configuration
 app = Flask(__name__)
 app.config['SECRET_KEY']  = 'itsasecret'
 
 #Setting Up App views
-# Music view
-@app.route('/music')
-def music():
-	return render_template('music.html')
-
 # Getting weather acess view (home page)
 @app.route('/', methods = ['POST','GET'])
 def get_post_javascript_data():
@@ -56,8 +52,17 @@ def get_post_javascript_data():
 @app.route('/weather')
 def index():
 	#Api calls
-	description,temp,place = getWeatherResults(data['lat'],data['long'],getApiKey())
-	return render_template('weather.html',description = description,temp = temp,place = place)
+	description,temperature,place = getWeatherResults(data['lat'],data['long'],getApiKey())
+	global temp
+	print(f"temp is {temp}")
+	temp = temperature
+	print(f"temp is {temp}")
+	return render_template('weather.html',description = description,temperature = temperature,place = place)
+
+# Music view
+@app.route('/music')
+def music():
+	return render_template('music.html',temp = temp)
 
 # Page view if no acess is given
 @app.route('/no_access')
