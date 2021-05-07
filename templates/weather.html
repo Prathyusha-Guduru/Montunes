@@ -15,7 +15,12 @@
 
 	<!-- jquery CDN Link to facilitate post request to the server -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="/static/location.js"></script>
+	<script>
+		data = 3
+		$.post("/postmethod", {
+			object: 2
+		});
+	</script>
 </body>
 
 </html>
