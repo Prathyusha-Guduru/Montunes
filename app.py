@@ -52,13 +52,17 @@ def get_post_javascript_data():
 	print(f"data is {data} and its type is {type(data)}")
 	return render_template('index.html')
 
-# 2nd page view
+# 2nd page view (if access is given)
 @app.route('/weather')
 def index():
 	#Api calls
 	description,temp,place = getWeatherResults(data['lat'],data['long'],getApiKey())
 	return render_template('weather.html',description = description,temp = temp,place = place)
 
+# Page view if no acess is given
+@app.route('/no_access')
+def no_access():
+	return render_template('no-access.html')
 
 #Running the app
 if __name__ == '__main__':
