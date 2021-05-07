@@ -45,6 +45,11 @@ body {
   border: none;
 }
 
+.home-screen-container .no-access {
+  font-size: 50px;
+  font-weight: 500;
+}
+
 .content {
   display: -webkit-box;
   display: -ms-flexbox;
