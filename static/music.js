@@ -17,8 +17,8 @@ const songs = ['i-will-be','aurora','maroon-5']
 let songIndex = 0
 
 //Songs list according to temperatures-range
-const songsForHotWeather = ['shape-of-you','girls-like-you']
-const songsForColdWeather = ['perfect','aurora']
+const songsForHotWeather = ['shape-of-you','girls-like-you','maroon-5']
+const songsForColdWeather = ['perfect','aurora','i-will-be']
 
 
 //Functions for loading,playing,pausing, nextSong, prevSong, and progress Bar
