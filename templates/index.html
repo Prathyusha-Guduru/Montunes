@@ -1,12 +1,20 @@
-{% extends 'base.html' %}
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="info content">
-	<h1 class="temperature"> <strong class="temp">{{ temp }}</strong> ° C </h1>
-	<h2 class="location">{{place}}</h2>
-	<h3 class="description">{{ description }}</h3>
-	<h3 class="weather-commentary description"></h3>
-</div>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
 
-<script src="/static/script.js"></script>
-{%endblock %}
+<body>
+	<h1>Weather page</h1>
+
+	<a href="{{url_for('index')}}">Check weather</a>
+
+	<script src="/static/location.js"></script>
+
+</body>
+
+</html>

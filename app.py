@@ -1,11 +1,7 @@
 #importing 3rd party libraries
 from flask import Flask,render_template,redirect,request,url_for,jsonify,make_response
 import requests
-
 import configparser
-
-
-
 
 #API Configuration	
 def getApiKey():
@@ -23,29 +19,29 @@ def getWeatherResults(lat,long,api_key):
 	print(f"place is {place}")
 	return (description,temp,place)
 
-
-
-
-#Flask app creation and configuration
-app = Flask(__name__)
-app.config['SECRET_KEY']  = 'itsasecret'
-
-#Setting Up App views
-
-@app.route('/music')
-def music():
-	return render_template('music.html')
-
-
-data = {}
-
+# Function for processng data recived from POST request by fetch() in location.js file
 def random(req):
 	if(req != None):
 		return req
 	else:
 		return None
 
-@app.route('/weather', methods = ['POST','GET'])
+
+# Global variable
+data = {}
+
+#Flask app creation and configuration
+app = Flask(__name__)
+app.config['SECRET_KEY']  = 'itsasecret'
+
+#Setting Up App views
+# Music view
+@app.route('/music')
+def music():
+	return render_template('music.html')
+
+# Getting weather acess view (home page)
+@app.route('/', methods = ['POST','GET'])
 def get_post_javascript_data():
 
 	req = request.get_json()
@@ -54,18 +50,15 @@ def get_post_javascript_data():
 	print(f"data is {data}")
 	data = random(req)
 	print(f"data is {data} and its type is {type(data)}")
-	return render_template('weather.html')
+	return render_template('index.html')
 
-@app.route('/')
+# 2nd page view
+@app.route('/weather')
 def index():
 	#Api calls
 	description,temp,place = getWeatherResults(data['lat'],data['long'],getApiKey())
-	return render_template('index.html',description = description,temp = temp,place = place)
+	return render_template('weather.html',description = description,temp = temp,place = place)
 
-@app.route('/newroute')
-def newroute():
-	return f"Data is {data['lat']} and long is {data['long']}"
-	
 
 #Running the app
 if __name__ == '__main__':
