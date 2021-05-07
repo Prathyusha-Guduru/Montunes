@@ -19,6 +19,7 @@ function onSucess(lat,long){
 //If user does not give the access to the location
 function onFailure(message){
 	console.log(message);
+	//redirects to the no_access.html page
 	window.location.replace(`${window.origin}/no_access`);	
 }
 
