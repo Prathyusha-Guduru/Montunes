@@ -170,4 +170,49 @@ body {
 .navbar a:hover {
   color: #4c4c4c;
 }
+
+@media only screen and (max-width: 600px) {
+  .image {
+    visibility: hidden;
+  }
+  body {
+    overflow: scroll;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    background-color: lightcoral;
+  }
+  .content {
+    width: 100%;
+    position: relative;
+    left: 50px;
+  }
+  .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100px;
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+    position: relative;
+    top: 0px;
+    background-color: lightblue;
+  }
+  .music-container {
+    background-color: lightgreen;
+  }
+}
 /*# sourceMappingURL=style.css.map */

@@ -147,3 +147,35 @@ body{
 
 
 
+// MEDIA QUERIES FOR MOBILE
+
+@media only screen and (max-width: 600px) {
+	.image{
+		visibility: hidden;
+	}
+	body{
+		overflow: scroll;
+		@include flexCenter();
+		position: absolute;
+		background-color: lightcoral;
+		
+	}
+	.content{
+		width: 100%;
+		position: relative;
+		left: 50px;
+	}
+	.navbar{
+		@include flexCenter();
+		height: 100px;
+		transform: rotate(270deg);
+		position: relative;
+		top : 0px;
+		background-color: lightblue;
+
+	}
+	.music-container{
+		background-color: lightgreen;
+	}
+}
+
