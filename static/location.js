@@ -18,7 +18,8 @@ function onSucess(lat,long){
 
 //If user does not give the access to the location
 function onFailure(message){
-	console.log(message);	
+	console.log(message);
+	window.location.replace();	
 }
 
 //Calling the gelocation api 
