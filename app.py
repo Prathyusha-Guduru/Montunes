@@ -38,7 +38,7 @@ app.config['SECRET_KEY']  = 'itsasecret'
 #Setting Up App views
 # Getting weather acess view (home page)
 @app.route('/', methods = ['POST','GET'])
-def get_post_javascript_data():
+def index():
 
 	req = request.get_json()
 	print(req)
@@ -50,7 +50,7 @@ def get_post_javascript_data():
 
 # 2nd page view (if access is given)
 @app.route('/weather')
-def index():
+def weather():
 	#Api calls
 	description,temperature,place = getWeatherResults(data['lat'],data['long'],getApiKey())
 	global temp
