@@ -11,14 +11,17 @@ const progressContainer = document.getElementById('progress-container')
 const title = document.getElementById('title')
 const cover = document.getElementById('music-cover')
 
+// Getting temperature 
+let temp = document.querySelector('.temp').innerHTML
+temp = Number(temp)
 
-// Songs list
-const songs = ['i-will-be','aurora','maroon-5']
-let songIndex = 0
 
 //Songs list according to temperatures-range
-const songsForHotWeather = ['shape-of-you','girls-like-you','maroon-5']
-const songsForColdWeather = ['perfect','aurora','i-will-be']
+// 0 to 2 -> for hot weather
+// 2 to 5 -> for cold weather
+let songIndex = temp <= 20 ? 3 : 0
+const songs = ['shape-of-you','girls-like-you','maroon-5','perfect','aurora','i-will-be']
+
 
 
 //Functions for loading,playing,pausing, nextSong, prevSong, and progress Bar
@@ -88,7 +91,7 @@ function setProgress(e){
 
 
 //Function calls and event listeners
-loadSong(songsForHotWeather[songIndex])
+loadSong(songs[songIndex])
 playBtn.addEventListener('click',()=>{
 	const isPlaying = musicContainer.classList.contains('play')
 	if(isPlaying){
