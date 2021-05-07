@@ -1,5 +1,6 @@
+//GEO - LOCATION API CALLS
 
-
+//If user gives the access to the location
 function onSucess(lat,long){
 	
 	console.log(`Latitude is ${lat} and longitude is ${long}`);
@@ -15,14 +16,17 @@ function onSucess(lat,long){
 	
 }
 
+//If user does not give the access to the location
 function onFailure(message){
 	console.log(message);	
 }
 
+
+
+//Calling the gelocation api 
 navigator.geolocation.getCurrentPosition((position)=>{
 	onSucess(position.coords.latitude,position.coords.longitude)
 },(positionError)=>{
 	onFailure()
 })
-
 
