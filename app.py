@@ -1,5 +1,6 @@
 #importing 3rd party libraries
 from flask import Flask,render_template,redirect,request,url_for
+from flask.helpers import make_response
 import requests
 import configparser
 
@@ -45,9 +46,11 @@ def music():
 
 @app.route('/weather',methods = ['GET','POST'])
 def weather():
-	status = request.form.get("userStatus", False)
-	print(f"Status is {status}")
-	return render_template('weather.html',status = status)
+	req = request.get_json()
+	print(req)
+
+	
+	return render_template('weather.html')
 #Running the app
 if __name__ == '__main__':
 	app.run(debug = True)
