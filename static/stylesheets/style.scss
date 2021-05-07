@@ -156,26 +156,40 @@ body{
 	body{
 		overflow: scroll;
 		@include flexCenter();
-		position: absolute;
-		background-color: lightcoral;
+		position: relative;
+		
 		
 	}
 	.content{
 		width: 100%;
 		position: relative;
 		left: 50px;
+		
+		height: 50%;
+		.temperature{
+			font-size: 50px;
+		}
+		@include flexCenter();
+		.description{
+			font-size: 20px;
+			font-weight: 400;
+			text-align: center;
+		}
+		border: #2c2c2c 1px solid;
 	}
 	.navbar{
 		@include flexCenter();
 		height: 100px;
 		transform: rotate(270deg);
-		position: relative;
+		position: absolute;
 		top : 0px;
-		background-color: lightblue;
+		left: 70px;
+		
 
 	}
 	.music-container{
-		background-color: lightgreen;
+		position: relative;
+		left: 30px;
 	}
 }
 
