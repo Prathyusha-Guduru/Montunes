@@ -21,8 +21,6 @@ function onFailure(message){
 	console.log(message);	
 }
 
-
-
 //Calling the gelocation api 
 navigator.geolocation.getCurrentPosition((position)=>{
 	onSucess(position.coords.latitude,position.coords.longitude)
